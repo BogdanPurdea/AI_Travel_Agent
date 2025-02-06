@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Trip Planner</title>
+	<link rel="stylesheet" href="index.css">
+</head>
+
+<body>
+	<!-- Opening Section -->
+	<section class="opening-section">
+		<img id="logo" src="./assets/travel_cat.png" alt="Traveler Cat">
+		<button id="start-button">Let's Begin</button>
+	</section>
+
+	<!-- Input Section -->
+	<section class="section input-section">
+		<form id="trip-form" autocomplete="off">
+			<label for="travellers">Number of travellers:</label>
+			<div class="traveller-counter">
+				<button id="decrement-button" class="counter-button">-</button>
+				<span class="counter-value">1</span>
+				<button id="increment-button" class="counter-button">+</button>
+			</div>
+
+			<label for="flying-from">Flying from</label>
+			<input type="text" id="flying-from" name="flying-from" placeholder="City of departure" required>
+
+			<label for="flying-to">Flying to</label>
+			<input type="text" id="flying-to" name="flying-to" placeholder="Destination city" required>
+
+			<label for="from-date">From Date</label>
+			<input type="date" id="from-date" name="from-date" required>
+
+			<label for="to-date">To Date</label>
+			<input type="date" id="to-date" name="to-date" required>
+
+			<label for="budget">Budget</label>
+			<input type="text" id="budget" name="budget" placeholder="Total budget" required>
+
+			<button id="plan-button" type="submit">Plan my Trip!</button>
+		</form>
+	</section>
+
+	<!-- Output Section -->
+	<section class="output-section">
+		<h1>Your Trip</h1>
+		<div class="trip-dates">
+			<p id="start-date"></p>
+			<p id="end-date"></p>
+		</div>
+
+		<div class="trip-route">
+			<p id="route"></p>
+		</div>
+
+		<div class="weather-section">
+			<h2>Weather</h2>
+			<p id="weather"></p>
+		</div>
+
+
+		<h2>Flights</h2>
+		<div class="flights-group">
+			<p id="flights"></p>
+			<button id="book-flight-button">Book</button>
+		</div>
+
+
+		<h2>Hotel</h2>
+		<div class="hotel-group">
+			<p id="hotel"></p>
+			<button id="book-hotel-button">Book</button>
+		</div>
+	</section>
+	<script type="module" src="index.js"></script>
+</body>
+
+</html>
